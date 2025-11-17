@@ -1,11 +1,10 @@
-/* Sticky navbar shadow */
+/* 
 .sticky-top {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   background-color: #ffffff;
   z-index: 1020;
 }
 
-/* Dropdown animation */
 .dropdown-menu {
   animation: fadeIn 0.3s ease-in-out;
   transform-origin: top;
@@ -22,12 +21,11 @@
   }
 }
 
-/* Offcanvas animation */
+
 .offcanvas-end {
   transition: transform 0.4s ease-in-out;
 }
 
-/* Nav link hover underline */
 .nav-link {
   position: relative;
   transition: color 0.3s ease;
@@ -48,7 +46,6 @@
   width: 100%;
 }
 
-/* for about us css */
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #fff;
@@ -94,5 +91,104 @@ body {
 
 .btn-black:hover {
   background-color: #333;
+  transform: translateY(-3px);
+} */
+/* Sticky navbar shadow */
+.sticky-top {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff; /* keeps it light so logo pops */
+  z-index: 1020;
+}
+
+/* Dropdown animation */
+.dropdown-menu {
+  animation: fadeIn 0.3s ease-in-out;
+  transform-origin: top;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Offcanvas animation */
+.offcanvas-end {
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Nav link hover underline */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+  color: #0078BF; /* logo color for links */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0078BF; /* logo color underline */
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* for about us css */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.about-section {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.about-img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0078BF; /* logo color */
+}
+
+.about-text {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+.highlight {
+  color: #0078BF; /* logo color */
+  font-weight: 600;
+}
+
+.btn-black {
+  background-color: #0078BF; /* changed from black to logo color */
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-black:hover {
+  background-color: #005f99; /* darker shade of logo for hover */
   transform: translateY(-3px);
 }
